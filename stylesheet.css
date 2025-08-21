@@ -1,0 +1,1437 @@
+/*Font*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/*Thai font*/
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@100;200;300;400;500;600;700&family=Noto+Sans+Thai+Looped:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/*เนื้อหา Body*/
+body {
+    background-color: #151C21;
+    font-family: "Poppins", sans-serif; 
+    font-weight: 400;
+    font-style: normal;
+    padding-top: 70px;
+}
+
+/*กรณีขนาดความหน้าจอไม่เกิน 991px*/
+@media (max-width: 991px) {
+    body {
+        padding-top: 70px;
+        padding-bottom: 70px; /*เพื่มพื้นที่ body ด้านล่างให้ bottom-navbar*/  
+    }
+}
+
+/*ฟอนต์และสี*/
+.content {
+    font-family: "Noto Sans Thai Looped", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    color: #6EC28B;
+}
+
+/*Navbar customize*/
+.offcanvas {
+    color: #151C21;
+    font-family: "Noto Sans Thai Looped", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+/*โลโก้*/
+.logo {
+    font-family: "Poppins", sans-serif; 
+    font-weight: 500;
+    font-style: normal;
+}
+
+.nav-main {
+    background-color: #6EC28B;
+}
+
+.nav-link {
+    color: rgb(50, 80, 100);
+    font-weight: 500;
+    position: relative;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: #151C21;
+}
+
+/*Icon in navbar customize*/
+.active-icon {
+    font-size: 20px;
+    margin: 3px;
+}
+
+.icon {
+    font-size: 20px;
+    margin: 3px;
+}
+
+/*Remove border on menu icon in navbar*/
+.navbar-toggler {
+    border: none;
+    box-shadow: none;
+}
+
+.navbar-toggler:hover {
+    border: none;
+    box-shadow: none;
+}
+
+.navbar-toggler:active {
+    border: none;
+    box-shadow: none;
+}
+
+.navbar-toggler:focus {
+    border: none;
+    box-shadow: none;
+}
+
+/*Remove border on btn-close in sidebar*/
+.offcanvas-header .btn-close:focus {
+    border: none;
+    box-shadow: none;
+}
+
+/*Sidebar menu*/
+.sidebar {
+    background-color: rgb(110, 194, 139);
+}
+
+.offcanvas-header {
+    border-bottom: 2px solid #151C21;
+}
+
+/*Balance Display*/
+.balance-icon {
+    position: absolute;
+    color: #6EC28B;
+    height: auto;
+    font-size: 18px;
+    justify-content: left;
+    align-items: left;
+    right: 5px;
+}
+
+.balance {
+    position: relative;
+    display: flex;
+    width: 100px; /* กำหนดความกว้าง */
+    height: 35px; /* กำหนดความสูง */
+    background: #151C21; /* กำหนดสีพื้นหลัง */
+    border-radius: 90px; /* กำหนดความโค้งของขอบ */
+    line-height: 35px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.balance-text {
+    position: absolute;
+    color: #6EC28B;
+    width: 100%;
+    text-align: center;
+}
+
+/*Underline on element navbar*/
+@media (min-width: 991px) {
+    .nav-link::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background-color: rgb(0, 0, 0);
+        visibility: hidden;
+        transform: 0.3s ease-in-out;
+    }
+    
+    .nav-link:hover::before, .nav-link.active::before {
+        width: 100%;
+        visibility: visible;
+    }
+}
+
+/*รูปเลื่อนได้*/
+.carousel-item {
+    max-height: auto; /* ปรับความสูงของ Carousel ตามต้องการ */
+    overflow: hidden;
+    padding: 15px;
+    cursor: -webkit-grabbing;
+}
+
+/*กำหนดขนาดของรูป*/
+.carousel-item img {
+    max-height: 400px; /* ไม่ให้ภาพยืดเมื่อ Carousel มีความสูงที่มากกว่าขนาดภาพ */
+    width: 100%; /* อนุญาตให้ความสูงของภาพปรับขนาดตามกว้างโดยอัตโนมัติ */
+    height: auto; /* อนุญาตให้ความกว้างของภาพปรับขนาดตามความสูงโดยอัตโนมัติ */
+    object-fit: cover; /* แสดงภาพโดยไม่เปลี่ยนรูปแบบสัดส่วน */
+    object-position: center;
+    border-radius: 50px;
+}
+
+/*แจ้งเตือนบนหน้าจอหลัก*/
+.notification {
+    border-radius: 80px;
+    color: #6EC28B;
+    background: transparent;
+    border: 2px solid #6EC28B;
+}
+
+.notif-text {
+    font-family: "Noto Sans Thai Looped", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    display: inline;
+    font-size: 16px;
+}
+
+.notif-text i {
+    margin-right: 5px;
+}
+
+.notif-content {
+    display: inline;
+}
+
+/* CSS Animation สีฟอนต์ฟรุ้งฟริ้ง */
+@keyframes changeColor {
+    0% { color: #6EC28B; }
+    50% { color: #d0e45f; }
+    100% { color: #6EC28B; }
+}
+
+.heading-group {
+    color: #6EC28B;
+    font-weight: 500;
+    animation: changeColor 2s infinite; /* เปลี่ยนสีทุก 3 วินาที วนลูป */
+}
+
+/*Product*/
+.item .card-img-top{
+    border-radius: 50px;
+    padding: 15px;
+    object-fit: cover;
+    border: none;
+}
+
+.item{
+    border-radius: 40px;
+    background-color: #6EC28B;
+    height: auto;
+    font-family: "Noto Sans Thai Looped", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    border: none;
+}
+
+.item .card-body{
+    padding: 25px;
+    margin-top: -15px;
+    border: none;
+    width: 100%;
+    height: auto;
+}
+
+.btn-buy{
+    border-radius: 50px;
+    width: 150px;
+    background-color: #151C21;
+    color: #6EC28B;
+}
+
+.btn-buy:hover{
+    background-color: rgb(255, 255, 255);
+    color: #151C21;
+}
+
+.item h3, .item h5, .item p {
+    color: #151C21;
+}
+
+/* สไตล์สำหรับ Navbar for Mobile ด้านล่าง*/
+.navbar-bottom {
+    display: none;
+}
+
+@media (max-width: 991px) {
+    .navbar-bottom {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 50px;
+        background-color: white;
+        overflow-x: auto;
+        display: flex;
+        z-index: 999; /* ให้ Navbar อยู่ด้านบนสุด */
+    }
+
+    .navbar-bottom-link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-grow: 1;
+        min-width: 50px;
+        overflow: hidden;
+        white-space: nowrap;
+        color: #151C21;
+        font-size: 24px;
+    }
+    
+    .navbar-bottom-link:hover {
+        color: #6EC28B;
+    }
+    
+    .navbar-bottom-link:active , .navbar-bottom-link.active {
+        color: #6EC28B;
+    }
+    
+    .navbar-bottom-link:focus {
+        color: #526b7e;
+    }
+    
+}
+
+/*Credit on Website*/
+footer {
+    text-align: center;
+    color: #6EC28B;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding-top: 10px;
+}
+
+/*Topup Box Show on Home*/
+.topup {
+    border-radius: 40px;
+    background: transparent;
+    border: 2px solid #6EC28B;
+    height: auto;
+    max-height: auto;
+    color: white;
+}
+
+.topup-body {
+    padding: 70px;
+}
+
+.topup .topUpLogo {
+    max-width: 100%; /* ควบคุมความกว้างของรูปภาพ */
+    max-height: 300px; /* ควบคุมความสูงของรูปภาพ */
+    height: auto; /* ให้รูปภาพปรับสัดส่วนความสูงตามกว้าง */
+    width: auto; /* ให้รูปภาพปรับสัดส่วนความกว้างตามสูง */
+}
+
+.topup .logoTrueMoney {
+    margin-left: 5px;
+    max-width: 100%; /* ควบคุมความกว้างของรูปภาพ */
+    max-height: 50px; /* ควบคุมความสูงของรูปภาพ */
+}
+
+.btn-topup {
+    border-radius: 50px;
+    width: 150px;
+    background-color: #6EC28B;
+    color: #151C21;
+}
+
+.btn-topup:hover{
+    background-color: rgb(255, 255, 255);
+    color: #151C21;
+}
+
+
+/* CSS Animation */
+@keyframes changeColor {
+    0% { color: #6EC28B; }
+    50% { color: #d0e45f; }
+    100% { color: #6EC28B; }
+}
+
+.topup .card-title {
+    color: #6EC28B;
+    font-weight: 500;
+    animation: changeColor 5s infinite; /* เปลี่ยนสีทุก 3 วินาที วนลูป */
+}
+
+/*ปุ่มดูเพิ่มเติมหน้า Home*/
+.more {
+    background: transparent;
+    border: none;
+    color: white;
+}
+
+.btn-more {
+    border-radius: 50px;
+    width: 150px;
+    background-color: transparent;
+    color: #6EC28B;
+    border: 2px solid #6EC28B;
+}
+
+.btn-more:hover {
+    border: 2px solid #ffffff;
+}
+
+/*กรณีหน้าจอยาวไม่เกิน 768px ซ่อนรูปในหน้า Home card Topup*/
+@media (max-width: 768px) {
+    .topUpLogo {
+      display: none; 
+    }
+}
+
+/*Login - Register - Topup - ResetPassword Format Page*/
+.login-register {
+    display: flex;
+    justify-content: center; /* จัดตำแหน่งตามแนวนอน (X-axis) ให้อยู่ตรงกลาง */
+    align-items: center; /* จัดตำแหน่งตามแนวตั้ง (Y-axis) ให้อยู่ตรงกลาง */
+    margin-top: 80px;
+    font-family: "Noto Sans Thai Looped", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #ffffff;
+}
+
+.login-register h2, .login-register h6 {
+    text-align: center;
+    color: #ffffff;
+}
+
+.login-register label {
+    color: #6EC28B;
+}
+
+.login-register form {
+    width: 500px;
+}
+
+.login-register input {
+    background: transparent;
+    color: #6EC28B;
+    border: 2px solid #6EC28B;
+    border-radius: 50px;
+}
+
+.login-register input:active {
+    background: transparent;
+    color: #6EC28B;
+    border: 2px solid #ffffff;
+    border-radius: 50px;
+    box-shadow: none;
+}
+
+.login-register input:focus {
+    background: transparent;
+    color: #6EC28B;
+    border: 2px solid #ffffff;
+    border-radius: 50px;
+    box-shadow: none;
+}
+
+.login-register input[session] {
+    background: transparent;
+    color: #6EC28B;
+}
+
+.login-register input::placeholder {
+    color: #508f66;
+}
+
+.topup-pic {
+    width: 150px;
+    height: auto;
+    margin: 20px;
+}
+
+/*กรณีหน้าจอยาวไม่เกิน 768px ให้ความยาว input field ยาว 75% ของหน้าจอ*/
+@media (max-width: 768px) {
+    .login-register form {
+        width: 75%;
+    }    
+}
+
+/*ปุ่มลืมรหัสผ่าน*/
+.forgot-password {
+    display: flex;
+    justify-content: end;
+    align-items: right;
+    color: #6EC28B;
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    color: #ffffff;
+}
+
+/*ปุ่ม Login*/
+.btn-login {
+    border-radius: 50px;
+    width: 100%;
+    height: 45px;
+    background-color: #6EC28B;
+    color: #151C21;
+    display: block; /* กำหนดให้ปุ่มเป็น block เพื่อให้ปุ่มมีความกว้างเต็มคอลัมน์ */
+    margin: 0 auto; /* จัดให้ปุ่มอยู่ตำแหน่งกึ่งกลางภายในคอลัมน์ */
+    font-family: "Noto Sans Thai Looped", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.btn-login:hover {
+    color: #151C21;
+    background-color: #ffffff;
+}
+
+.btn-login:visited {
+    color: #151C21;
+    background-color: #ffffff;
+}
+
+.btn-login:active {
+    color: #151C21;
+    background-color: #ffffff;
+}
+
+/*Config Page Register More*/
+.register {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.register a {
+    color: #6EC28B;
+    text-decoration: none;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+.register a:hover {
+    color: #ffffff;
+}
+
+.login-register .en {
+    font-family: "Poppins", sans-serif; 
+    font-weight: 500;
+    font-style: normal;
+}
+
+.form-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.form-group i {
+    position: absolute;
+    left: 10px;
+    color: #6EC28B;
+    padding-left: 5px;
+}
+
+.login-register .form-control {
+    padding-left: 40px;
+}
+
+.back-btn {
+    color: #6EC28B;
+}
+
+.back-btn:hover {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.icon-back {
+    font-size: 25px;
+}
+
+/*Menu on Product Page*/
+.menu-btn {
+    font-family: "Noto Sans Thai Looped", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding: 8px 50px;
+    background-color: transparent;
+    color: #6EC28B;
+    border: 2px solid #6EC28B;
+    text-decoration: none;
+    border-radius: 50px;
+    white-space: nowrap;
+    display: flex;
+    justify-content: center; /* กำหนดให้ตัวหนังสืออยู่กึ่งกลางในแนวนอน */
+    align-items: center; /* กำหนดให้ตัวหนังสืออยู่กึ่งกลางในแนวตั้ง */
+    text-align: center;
+}
+
+.menu-btn:hover {
+    background-color: white;
+    color: #151C21;
+    border: 2px solid #ffffff;
+}
+
+.active-menu-btn {
+    font-family: "Noto Sans Thai Looped", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding: 8px 50px;
+    background-color: #6EC28B;
+    color: #151C21;
+    border: 2px solid #6EC28B;
+    text-decoration: none;
+    border-radius: 50px;
+    white-space: nowrap;
+    display: flex;
+    justify-content: center; /* กำหนดให้ตัวหนังสืออยู่กึ่งกลางในแนวนอน */
+    align-items: center; /* กำหนดให้ตัวหนังสืออยู่กึ่งกลางในแนวตั้ง */
+    text-align: center;
+}
+
+.active-menu-btn:hover {
+    background-color: white;
+    color: #151C21;
+    border: 2px solid #ffffff;
+}
+
+.active-menu-btn:active {
+    background-color: #6EC28B;
+    color: #151C21;
+    border: 2px solid #6EC28B;
+}
+
+/*กรณีความยาวหน้าจอไม่เกิน 768px ให้ป้องกันการทับกันของตัวอักษรบน Menu*/
+@media (max-width: 768px) {
+    .menu {
+        width: auto;
+        overflow-x: auto; /* เพิ่ม scrollbar ในกรณีที่เมนูเกินขอบเขตการแสดงผล */
+        scroll-snap-type: x mandatory; /* ทำให้เมนูเลื่อนตาม grid แนวนอน */
+        scroll-snap-align: start; /* ให้เมนูเลื่อนไปที่จุดเริ่มต้นของ grid */
+    }
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.back-menu {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+}
+
+.back-menu .heading-group {
+    padding-left: 5px;
+    padding-top: 5px;
+}
+
+/*Select Product*/
+.pic-product .card-img {
+    border-radius: 40px;
+    min-width: 400px;
+    width: auto;
+    height: 400px;
+    object-fit: cover;
+}
+
+.pic-product .item {
+    margin-top: 5px;
+    background: transparent;
+    width: auto;
+    min-width: 400px;
+    border: none;
+}
+
+/*กรณีความยาวหน้าจอไม่เกิน 992px*/
+@media (max-width: 1200px) {
+    .pic-product .card-img, .pic-product .item{
+        width: auto;
+        min-width: 300px;
+        min-height: 300px;
+        margin-right: 0px;
+    }
+
+    .detail-product .item {
+        width: auto;
+        min-width: 300px;
+        margin-left: 0px;
+    }
+
+    .buy-product {
+        width: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .detail-product h2, .detail-product h4 {
+        text-align: center;
+    }
+
+    .detail-product p {
+        text-align: center;
+    }
+
+    .buy-product {
+        width: auto;
+    }
+}
+
+@media (min-width: 768px) {
+    .detail-product .item {
+        height: 400px;
+    }
+}
+
+.detail-product .item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+    padding-top: 5px;
+    border-radius: 40px;
+    background: transparent;
+    color: #6EC28B;
+    border: none;
+    width: 100%;
+}
+
+.detail-product h4 {
+    color: #6EC28B;
+}
+
+.detail-product p, .detail-product h2 {
+    color: #ffffff;
+}
+
+.detail-product p {
+    font-size: 16px;
+}
+
+.buy-product .item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+    border-radius: 40px;
+    background-color: transparent;
+    border: 2px solid #6EC28B;
+    color: #6EC28B;
+    width: 100vw;
+}
+
+.buy-product h4 {
+    margin-bottom: 0;
+}
+
+.buy-product .btn-cart {
+    border-radius: 50px;
+    width: 150px;
+    height: 45px;
+    margin-right: 5px;
+    background-color: transparent;
+    color: #6EC28B;
+    border: 2px solid #6EC28B;
+    font-family: "Noto Sans Thai Looped", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.buy-product .btn-buy {
+    border-radius: 50px;
+    width: 150px;
+    height: 45px;
+    margin-left: 5px;
+    background-color: #6EC28B;
+    color: #151C21;
+    border: 2px solid #6EC28B;
+    font-family: "Noto Sans Thai Looped", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.buy-product .btn-cart:hover, .buy-product .btn-buy:hover{
+    background-color: #ffffff;
+    color: #151C21;
+    border: 2px solid #ffffff;
+}
+
+.buy-product .btn-cart:active{
+    background-color: #6EC28B;
+    color: #151C21;
+    border: 2px solid #6EC28B;
+}
+
+.buy-product .btn-buy:active {
+    background-color: transparent;
+    color: #6EC28B;
+    border: 2px solid #6EC28B;
+}
+
+
+@media (max-width: 768px) {
+    .buy-product .btn-cart {
+        min-width: 120px;
+        width: auto;
+    }
+
+    .buy-product .btn-buy {
+        min-width: 120px;
+        width: auto;
+    }
+}
+
+.input-number {
+    text-align: center;
+    background-color: transparent;
+    color: #6EC28B;
+    border: none;
+}
+
+.input-number:focus {
+    background-color: transparent;
+    color: #6EC28B;
+    border: none;
+    box-shadow: none;
+}
+
+.number-input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px; /* ปรับความยาวตามที่ต้องการ */
+    margin: 0 auto; /* ย้าย input group ไปอยู่ตำแหน่งกึ่งกลางของ container */
+}
+
+/* เลือก Input Field ที่มี type เป็น number */
+input[type="number"].input-number {
+        /* เอาออกปุ่มเพิ่มและปุ่มลดโดยใช้ display: none */
+        appearance: textfield;
+        -moz-appearance: textfield;
+        /*ให้พอดีกับการลบปุ่ม */
+}
+
+/* ซ่อนปุ่มลดออก */
+input[type="number"].input-number::-webkit-inner-spin-button,
+input[type="number"].input-number::-webkit-outer-spin-button {
+    display: none;
+}
+
+.btn-outline-green {
+    font-weight: 800;
+    color: #6EC28B;
+    border: 2px solid #6EC28B;
+    background: transparent;
+    width: 40px;
+    border-radius: 100px;
+} 
+
+.btn-outline-green:active {
+    color: #6EC28B;
+    background: transparent;
+    border: 2px solid #6EC28B;
+} 
+
+.btn-outline-green:hover {
+    color: #ffffff;
+    background: transparent;
+    border: 2px solid #ffffff;
+}
+
+.user-sidemenu {
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+    border: 0px;
+    border-right: 2px solid #6EC28B ;
+    border-radius: 0px;
+}
+
+.user-body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    font-family: "Noto Sans Thai Looped", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.user-body .active-menu {
+    color: #6EC28B;
+}
+
+.group-menu a:hover {
+    color: #6EC28B;
+}
+
+.logout a:hover {
+    color: #ffffff;
+}
+
+.menu-items {
+    flex-grow: 1; /* ทำให้รายการเมนูยืดเต็มพื้นที่ที่เหลือ */
+}
+
+.logout {
+    margin-top: 75%;
+}
+
+.logout-tag {
+    color: #c26e6e;
+    text-decoration: none;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.group-menu a {
+    display: block;
+    margin-left: 10px;
+    text-decoration: none;
+    color: #ffffff;
+    padding-bottom: 10px;
+    font-size: 20px;
+}
+
+.hr-separator {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .user-sidemenu {
+        border-right: 0;
+        border-radius: 0px;
+    }
+    
+    .logout {
+        margin-top: 0;
+    }
+
+    .user-info-layout .row {
+        flex-direction: column;
+    }
+
+    .user-info-layout .col-md-4 {
+        order: 2; /* เปลี่ยนลำดับเมื่อหน้าจอเล็ก */
+    }
+
+    .user-info-layout .col-md-8 {
+        order: 1; /* เปลี่ยนลำดับเมื่อหน้าจอเล็ก */
+    }
+
+    .hr-separator {
+        display: block; /* แสดงเส้นคั่นเมื่อหน้าจอเล็ก */
+        border: 1px solid #6EC28B;
+    }
+
+    .user-sidemenu {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logout-tag {
+        margin-left: 0;
+    }
+    
+    .group-menu a {
+        margin-left: 0;
+    }
+}
+
+
+.user-info {
+    background: transparent;
+    border: 0px;
+    color: #ffffff;
+    font-family: "Noto Sans Thai Looped", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-info .text {
+    text-align: center;
+}
+
+.pic-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-info .icon-user-info {
+    color: #6EC28B;
+    font-size: 108px;
+}
+
+.user-info .balance-info-box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 2px solid #6EC28B;
+    background: transparent;
+    border-radius: 50px;
+    color: #ffffff;
+    min-width: 75%;
+}
+
+.balance-info-box .card-text {
+    color: #6EC28B;
+}
+
+.balance-info-box .card-body {
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.balance-info-box a {
+    text-decoration: none;
+    color: #6EC28B;
+}
+
+.balance-info-box a:hover {
+    color: #ffffff;
+}
+
+.balance-info-box a:active {
+    color: #ffffff;
+}
+
+.balance-info-box a:focus {
+    color: #ffffff;
+}
+
+.history-table {
+    border-radius: 40px; /* เพิ่มความโค้งให้กับมุมของตาราง */
+    overflow: hidden; /* ซ่อนส่วนที่เกินของความโค้ง */
+    text-align: center;
+    border-collapse: separate; /* กำหนดให้มีการแยกเส้นขอบ */
+    border-spacing: 0; /* กำหนดระยะห่างของเส้นขอบเป็น 0 */
+    border: 2px solid #6EC28B;
+    table-layout: auto;
+}
+
+.history-table td,
+.history-table th {
+    background-color: transparent; /* กำหนดสีพื้นหลังให้โปร่งใส */
+    border: none; /* ไม่มีเส้นคั่นที่เซลล์ของตาราง */
+    color: #6EC28B;
+    font-family: "Noto Sans Thai Looped", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.status-cart {
+    background-color: transparent;
+    border: none;
+    height: auto;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-family: "Noto Sans Thai Looped", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    padding: 10px;
+    font-size: 16px;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.status-cart i {
+    font-size: 40px;
+} 
+
+
+@media (max-width: 768px) {
+    .status-cart {
+        padding: 0px;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .status-cart h6 {
+        font-size: 13px;
+    }
+
+    .status-cart i {
+        font-size: 40px;
+    } 
+}
+
+.status {
+    background-color: transparent;
+    border: 2px solid #6EC28B;
+    border-radius: 50px;
+}
+
+.select {
+    color: #6EC28B;
+}
+
+.order-table {
+    border-radius: 40px; /* เพิ่มความโค้งให้กับมุมของตาราง */
+    overflow: hidden; /* ซ่อนส่วนที่เกินของความโค้ง */
+    border-collapse: separate; /* กำหนดให้มีการแยกเส้นขอบ */
+    border-spacing: 0; /* กำหนดระยะห่างของเส้นขอบเป็น 0 */
+    border: 0px;
+    table-layout: auto;
+}
+
+
+.order-table th, .order-table td {
+    border: none;
+    background-color: transparent;
+    color: #6EC28B;
+    font-family: "Noto Sans Thai Looped", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.order-table td {
+    padding: 10px 5px;
+}
+
+.order-table td input {
+    max-width: 50px;
+    padding: 5px;
+}
+
+.order-table th:nth-child(1),
+.order-table td:nth-child(1) {
+    width: 50%; /* กำหนดความยาวของ column ที่ 1 เป็น 40% */
+}
+
+.order-table th:nth-child(2),
+.order-table td:nth-child(2) {
+    width: 25%; /* กำหนดความยาวของ column ที่ 2 เป็น 30% */
+    text-align: center;
+}
+
+.order-table th:nth-child(3),
+.order-table td:nth-child(3) {
+    width: 25%; /* กำหนดความยาวของ column ที่ 3 เป็น 30% */
+    text-align: center;
+}
+
+.order-table th:nth-child(1) {
+    text-align: center;
+}
+
+.order-table .input-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px; /* ปรับความยาวตามที่ต้องการ */
+    margin: 0 auto; /* ย้าย input group ไปอยู่ตำแหน่งกึ่งกลางของ container */
+}
+
+.cart-info {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cart-info h6 {
+    white-space: normal;
+}
+
+.cart-info-pic {
+    width: 150px;
+    height: auto;
+    border-radius: 20px;
+    margin-right: 10px;
+}
+
+.remove-list {
+    text-decoration: none;
+    color: #c26e6e;
+}
+
+@media (max-width: 768px) {
+    .order-table th,
+    .order-table td {
+      white-space: normal;
+      word-wrap: break-word;
+      padding: 20;
+    }
+
+    .order-table .input-group {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100px; /* ปรับความยาวตามที่ต้องการ */
+        margin: 0 auto; /* ย้าย input group ไปอยู่ตำแหน่งกึ่งกลางของ container */
+    }
+
+    .order-table th:nth-child(1),
+    .order-table td:nth-child(1) {
+        width: 40%; /* กำหนดความยาวของ column ที่ 1 เป็น 40% */
+    }
+
+    .order-table th:nth-child(2),
+    .order-table td:nth-child(2) {
+        width: 30%; /* กำหนดความยาวของ column ที่ 2 เป็น 30% */
+    }
+
+    .order-table th:nth-child(3),
+    .order-table td:nth-child(3) {
+        width: 30%; /* กำหนดความยาวของ column ที่ 3 เป็น 30% */
+    }
+
+    .order-table th {
+        text-align: center;
+        align-items: center;
+        font-size: 14px;
+    }
+
+    .order-table td {
+        font-size: 14px;
+        text-align: center;
+        align-items: center;
+    }
+
+    .order-table td .remove-list {
+        display: hidden;
+    }
+
+    .order-table .input-group-prepend .btn,
+    .order-table .input-group-append .btn{
+        width: 10px; /* ปรับขนาดตามที่ต้องการ */
+        height: 30px; /* ปรับขนาดตามที่ต้องการ */
+        font-size: 10px; /* ปรับขนาดตามที่ต้องการ */
+        display: flex;
+        text-align: center;
+        align-items: center;
+    }
+
+    .cart-info {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        padding: 0px;
+    }
+
+    .cart-info-pic {
+        width: auto;
+        max-width: 100px;
+        height: auto;
+        border-radius: 20px;
+        object-fit: cover;
+        margin-right: 0px;
+    }
+}
+
+.card-for-table {
+    height: auto;
+    min-height: 50vh; /* กำหนดความสูงสูงสุดของการ์ด */
+    overflow-y: auto; /* เลื่อนแนวตั้งเมื่อข้อความมากเกินไป */
+    background-color: transparent;
+    border-radius: 50px;
+    border: none;
+}
+
+.card-for-table::-webkit-scrollbar {
+    width: 10px; /* กำหนดความกว้างของ Scrollbar */
+}
+
+.card-for-table::-webkit-scrollbar-thumb {
+    border-radius: 50px;
+    background-color: #6EC28B; /* กำหนดสีของ Thumb หรือช่วงเคลื่อนไหว */
+}
+
+.card-for-table::-webkit-scrollbar-track {
+    border-radius: 50px;
+    background: #526b7e; /* กำหนดสีของ Track หรือพื้นหลังของ Scrollbar */
+}
+
+.cart-payment-menu {
+    background-color: transparent;
+    border: 2px solid #6EC28B;
+    border-radius: 50px;
+}
+
+.status-payment-text {
+    background-color: transparent;
+    border: none;
+    height: auto;
+    width: auto;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    color: #ffffff;
+    font-family: "Noto Sans Thai Looped", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    padding: 20px;
+    white-space: nowrap;
+}
+
+.status-payment-text h4 {
+    color: #6EC28B;
+}
+
+.status-payment-button {
+    background-color: transparent;
+    border: none;
+    width: auto;
+    height: 100%;
+    color: #ffffff;
+    font-family: "Noto Sans Thai Looped", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    padding: 10px;
+    overflow-x: auto;
+    white-space: nowrap;
+    display: flex;
+    flex-direction: row; /* จัดให้เนื้อหาอยู่ในแนวนอน */
+    justify-content: end; /* จัดให้เนื้อหาอยู่กึ่งกลางแกนนอน */
+    align-items: center; /* จัดให้เนื้อหาอยู่กึ่งกลางแกนตั้ง */
+}
+
+.status-payment-button-phaseT {
+    background-color: transparent;
+    border: none;
+    width: auto;
+    height: 100%;
+    color: #ffffff;
+    font-family: "Noto Sans Thai Looped", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    padding: 10px;
+    overflow-x: auto;
+    white-space: nowrap;
+    display: flex;
+    flex-direction: row; /* จัดให้เนื้อหาอยู่ในแนวนอน */
+    justify-content: end; /* จัดให้เนื้อหาอยู่กึ่งกลางแกนนอน */
+    align-items: center; /* จัดให้เนื้อหาอยู่กึ่งกลางแกนตั้ง */
+}
+
+.status-payment-button .btn-cart-icon .icon {
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.status-payment-button .btn {
+    margin: 0px 1px; /* กำหนดระยะห่างระหว่างปุ่ม */
+}
+
+.status-payment-button-phaseT .btn-cart-icon .icon{
+    color: #6EC28B;
+    font-size: 24px;
+}
+
+
+.btn-cart-icon {
+    box-shadow: none;
+}
+
+@media (min-width: 576px) {
+    .status-payment-button-phaseT .btn-cart-icon {
+        display: none; /* ซ่อนปุ่ม "ย้อนกลับ" เมื่อหน้าจอเล็กกว่า 576px */
+    }
+}
+
+@media (max-width: 576px) {
+    .status-payment-button-phaseT .btn-cart {
+        display: none; /* ซ่อนปุ่ม "ย้อนกลับ" เมื่อหน้าจอเล็กกว่า 576px */
+    }
+    
+    .status-payment-button .btn {
+        margin: 0; /* กำหนดระยะห่างระหว่างปุ่ม */
+    }
+
+    .status-payment-button-phaseT .btn-cart-icon {
+        display: inline-block; /* แสดงไอคอนเมื่อหน้าจอเล็กกว่า 576px */
+    }
+}
+
+.card-for-list::-webkit-scrollbar {
+    width: 10px; /* กำหนดความกว้างของ Scrollbar */
+}
+
+.card-for-list::-webkit-scrollbar-thumb {
+    border-radius: 50px;
+    background-color: #6EC28B; /* กำหนดสีของ Thumb หรือช่วงเคลื่อนไหว */
+}
+
+.card-for-list::-webkit-scrollbar-track {
+    border-radius: 50px;
+    background: #526b7e; /* กำหนดสีของ Track หรือพื้นหลังของ Scrollbar */
+}
+
+.icon-wallet {
+    font-size: 64px;
+    color: #6EC28B;
+}
+
+.card-for-list{
+    width: 100%;
+    max-height: 300px;
+    min-height: 300px; /* กำหนดความสูงสูงสุดของการ์ด */
+    overflow-y: auto; /* เลื่อนแนวตั้งเมื่อข้อความมากเกินไป */
+    overflow-x: hidden;
+    background-color: transparent;
+    border-radius: 0px;
+    border: none;
+    font-family: "Noto Sans Thai Looped", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.cart-payment-method {
+    background-color: transparent;
+    color: #6EC28B;
+    border: 2px solid #6EC28B;
+    border-radius: 50px;
+    font-family: "Noto Sans Thai Looped", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.method-detail h4 , .method-detail h6{
+    margin-bottom: 0px;
+}
+
+.method-detail {
+    margin: 20px auto;
+}
+
+.method-detail h6 {
+    color: #ffffff;
+}
+
+.method-payment-topup {
+    color: #6EC28B;
+    text-decoration: none;
+    font-family: "Noto Sans Thai Looped", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.method-payment-topup:hover {
+    color: #ffffff;
+}
+
+.method-payment-topup:active {
+    color: #ffffff;
+}
+
+.card-method-title {
+    background: transparent;
+    border: none;
+    color: #6EC28B;
+    font-family: "Noto Sans Thai Looped", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+} 
